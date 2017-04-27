@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
         	<h1>Create Draft Order</h1>
-            <form action="/draft-order" method="post">
+            <form action="/draft-slot" method="post">
             	{{ csrf_field() }}
                 <div class="form-group">
                     <label for="year">Year</label>

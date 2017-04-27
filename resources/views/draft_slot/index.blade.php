@@ -17,13 +17,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($draft_order as $order)
+                    @foreach($draft_slots as $slot)
                     <tr>
-                        <td>{{ $order->year }}</td>
-                        <td>{{ $order->round }}</td>
-                        <td>{{ $order->pick }}</td>
-                        <td>{{ $order->team_id }}</td>
-                        <td>{{ $order->notes }}</td>
+                        <td>{{ $slot->year }}</td>
+                        <td>{{ $slot->round }}</td>
+                        <td>{{ $slot->pick }}</td>
+                        <td>{{ $slot->team_id }}</td>
+                        <td>{{ $slot->notes }}</td>
                     </tr>
                     @endforeach
                 </tbody>

@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\DraftOrder;
+use App\DraftSlot;
 use App\Team;
 
-class DraftOrderController extends Controller
+class DraftSlotController extends Controller
 {
-    public function __construct(DraftOrder $draft_order)
+    public function __construct(DraftSlot $draft_slot)
     {
-        $this->draft_order = $draft_order;
+        $this->draft_slot = $draft_slot;
     }
 
     /**
@@ -20,7 +20,7 @@ class DraftOrderController extends Controller
      */
     public function index()
     {
-        return view('draft_order.index')->with('draft_order', $this->draft_order->with('team')->get());
+        return view('draft_slot.index')->with('draft_slots', $this->draft_slot->with('team')->get());
     }
 
     /**
@@ -32,7 +32,7 @@ class DraftOrderController extends Controller
     {
         $teams = Team::orderBy('short_name')->get();
 
-        return view('draft_order.create')->with('teams', $teams);
+        return view('draft_slot.create')->with('teams', $teams);
     }
 
     /**
@@ -45,16 +45,16 @@ class DraftOrderController extends Controller
     {
         dd($request->all());
         foreach($request->pick as $i => $pick) {
-            $draft_order = new DraftOrder();
-            $draft_order->year = $request->year;
-            $draft_order->round = $request->round;
-            $draft_order->pick = $i;
-            $draft_order->team_id = $pick['team'];
-            $draft_order->notes = $pick['note'];
-            $draft_order->save();
+            $draft_slot = new DraftSlot();
+            $draft_slot->year = $request->year;
+            $draft_slot->round = $request->round;
+            $draft_slot->pick = $i;
+            $draft_slot->team_id = $pick['team'];
+            $draft_slot->notes = $pick['note'];
+            $draft_slot->save();
         }
 
-        return redirect()->route('draft-order.index');
+        return redirect()->route('draft-slot.index');
     }
 
     /**

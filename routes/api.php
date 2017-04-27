@@ -16,3 +16,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/draft-order/{year}/{round}', function($year, $round) {
+	return App\DraftSlot::with('team')->where('year', $year)->where('round', $round)->get();
+});
+
+Route::get('/draft-prospects/{year}', function($year) {
+	return App\Player::where('year', $year)->get();
+});
+
+Route::post('/draft-prospect', function (Request $request) {
+    return App\MockDraft::create($request->all());
+});

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class DraftOrder extends Model
+class DraftSlot extends Model
 {
     protected $fillable = ['year','round','pick','team_id','notes'];
 

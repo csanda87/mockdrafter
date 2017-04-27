@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\DraftOrder;
+use App\DraftSlot;
 use App\Player;
 
 class MockController extends Controller
 {
     public function getMyMock()
     {
-    	$draft_order = DraftOrder::with('team')->get();
+    	$draft_order = DraftSlot::with('team')->get();
     	$players = Player::all();
 
     	return view('mock')->with([
