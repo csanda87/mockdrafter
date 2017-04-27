@@ -25,7 +25,17 @@ Route::resource('/players', 'PlayerController');
 
 Route::get('/mock', 'MockController@getMyMock');
 Route::get('/draft-day', function () {
-	$mocks = App\MockDraft::groupBy('user_id')->get();
-	dd($mocks);
-	return view('draft_day');
+	$mocks = App\MockDraft::with('player','user','draftSlot.team')->get()->groupBy('user_id');
+
+	return view('draft_day')->with([
+		'mocks' => $mocks
+	]);
+});
+
+Route::get('official-mock', function() {
+	$draft_slots = App\DraftSlot::with('team')->get();
+
+	return view('official_mock')->with([
+		'draft_slots' => $draft_slots
+	]);
 });
