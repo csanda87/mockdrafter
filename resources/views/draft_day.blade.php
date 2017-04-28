@@ -319,7 +319,7 @@
 			],
 			[
 				'pick' => 27,
-				'name' => '',
+				'name' => 'TreDavious White',
 				'team' => 'BUF'
 			],
 			[
@@ -330,7 +330,7 @@
 			[
 				'pick' => 29,
 				'name' => '',
-				'team' => 'GB'
+				'team' => 'CLE'
 			],
 			[
 				'pick' => 30,
