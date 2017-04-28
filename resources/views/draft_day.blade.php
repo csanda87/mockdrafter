@@ -3,15 +3,15 @@
 @section('content')
 <div class="container">
 	<div class="row">
-		<div class="col-sm-2">Round 5</div>
+		<div class="col-sm-2">Round 13</div>
 		<div class="col-sm-2">
-			Dirt: 8
+			Dirt: {{ 3+0+2+3+0+0+0+3+0+0+0+1+1+0 }}
 		</div>
 		<div class="col-sm-2">
-			Berg: 7
+			Berg: {{ 3+1+0+3+0+0+0+3+0+0+0+1+3+0 }}
 		</div>
 		<div class="col-sm-2">
-			Nickel: 3
+			Nickel: 3 {{  }}
 		</div>
 		<div class="col-sm-2">
 			R3lic: 6
@@ -80,12 +80,22 @@
 			[
 				'pick' => 12,
 				'name' => 'Deshaun Watson',
-				'team' => 'ARI'
+				'team' => 'HOU'
 			],
 			[
 				'pick' => 13,
 				'name' => 'Haason Reddick',
 				'team' => 'ARI'
+			],
+			[
+				'pick' => 14,
+				'name' => 'Derek Barnett',
+				'team' => 'PHI'
+			],
+			[
+				'pick' => 15,
+				'name' => '',
+				'team' => 'IND'
 			]
 		]);
 	@endphp
