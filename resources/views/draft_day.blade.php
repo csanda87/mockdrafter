@@ -339,7 +339,7 @@
 			],
 			[
 				'pick' => 31,
-				'name' => '',
+				'name' => 'Reuben Foster',
 				'team' => 'SF'
 			],
 			[
