@@ -291,6 +291,61 @@
 				'pick' => 21,
 				'name' => 'Jarrad Davis',
 				'team' => 'DET'
+			],
+			[
+				'pick' => 22,
+				'name' => 'Charles Harris',
+				'team' => 'MIA'
+			],
+			[
+				'pick' => 23,
+				'name' => 'Evan Engram',
+				'team' => 'NYG'
+			],
+			[
+				'pick' => 24,
+				'name' => '',
+				'team' => 'OAK'
+			],
+			[
+				'pick' => 25,
+				'name' => '',
+				'team' => 'CLE'
+			],
+			[
+				'pick' => 26,
+				'name' => '',
+				'team' => 'SEA'
+			],
+			[
+				'pick' => 27,
+				'name' => '',
+				'team' => 'BUF'
+			],
+			[
+				'pick' => 28,
+				'name' => '',
+				'team' => 'DAL'
+			],
+			[
+				'pick' => 29,
+				'name' => '',
+				'team' => 'GB'
+			],
+			[
+				'pick' => 30,
+				'name' => '',
+				'team' => 'PIT'
+			],
+			[
+				'pick' => 31,
+				'name' => '',
+				'team' => 'ATL'
+			],
+			[
+				'pick' => 32,
+				'name' => '',
+				'team' => 'NO'
 			]
 		]);
 	@endphp
