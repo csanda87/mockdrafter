@@ -20,139 +20,84 @@
 			Ronko: 7
 		</div>
 	</div>
+	@php
+		$picks = collect([
+			[
+				'pick' => 1,
+				'name' => 'Myles Garrett',
+				'team' => 'CLE'
+			],
+			[
+				'pick' => 2,
+				'name' => 'Mitch Trubisky',
+				'team' => 'CHI'
+			],
+			[
+				'pick' => 3,
+				'name' => 'Solomon Thomas',
+				'team' => 'SF'
+			],
+			[
+				'pick' => 4,
+				'name' => 'Leonard Fournette',
+				'team' => 'JAX'
+			],
+			[
+				'pick' => 5,
+				'name' => 'Corey Davis',
+				'team' => 'TEN'
+			],
+			[
+				'pick' => 6,
+				'name' => 'Jamal Adams',
+				'team' => 'NYJ'
+			],
+			[
+				'pick' => 7,
+				'name' => 'Mike Williams',
+				'team' => 'LAC'
+			],
+			[
+				'pick' => 8,
+				'name' => 'Christian McCaffrey',
+				'team' => 'CAR'
+			],
+			[
+				'pick' => 9,
+				'name' => 'John Ross',
+				'team' => 'CIN'
+			],
+			[
+				'pick' => 10,
+				'name' => 'Patrick Mahomes',
+				'team' => 'KC'
+			],
+			[
+				'pick' => 11,
+				'name' => 'Marshon Lattimore',
+				'team' => 'NO'
+			],
+			[
+				'pick' => 12,
+				'name' => 'Haason Reddick',
+				'team' => 'ARI'
+			]
+		]);
+	@endphp
 	<div class="row">
 		<div class="col-sm-2">
 			<h3>Official</h3>
 			<div class="list-group">
-				<div class="list-group-item">
-					1 - CLE<br>
-					Myles Garrett
-				</div>
-				<div class="list-group-item">
-					2 - CHI<br>
-					Mitch Trubisky
-				</div>
-				<div class="list-group-item">
-					3 - SF<br>
-					Solomon Thomas
-				</div>
-				<div class="list-group-item">
-					4 - JAX<br>
-					Leonard Fournette
-				</div>
-				<div class="list-group-item">
-					5 - TEN<br>
-					Corey Davis
-				</div>
-				<div class="list-group-item">
-					6 - NYJ<br>
-					Jamal Adams
-				</div>
-				<div class="list-group-item">
-					7 - LAC<br>
-				</div>
-				<div class="list-group-item">
-					8 - CAR<br>
-				</div>
-				<div class="list-group-item">
-					9 - CIN<br>
-					
-				</div>
-				<div class="list-group-item">
-					10 - BUF<br>
-					
-				</div>
-				<div class="list-group-item">
-					11 - NO<br>
-					
-				</div>
-				<div class="list-group-item">
-					12 - CLE<br>
-					
-				</div>
-				<div class="list-group-item">
-					13 - ARI<br>
-					
-				</div>
-				<div class="list-group-item">
-					14 - PHI<br>
-					
-				</div>
-				<div class="list-group-item">
-					15 - IND<br>
-					
-				</div>
-				<div class="list-group-item">
-					16 - BAL<br>
-					
-				</div>
-				<div class="list-group-item">
-					17 - WAS<br>
-					
-				</div>
-				<div class="list-group-item">
-					18 - TEN<br>
-					
-				</div>
-				<div class="list-group-item">
-					19 - TB<br>
-					
-				</div>
-				<div class="list-group-item">
-					20 - DEN<br>
-					
-				</div>
-				<div class="list-group-item">
-					21 - DET<br>
-					
-				</div>
-				<div class="list-group-item">
-					22 - MIA<br>
-					
-				</div>
-				<div class="list-group-item">
-					23 - NYG<br>
-					
-				</div>
-				<div class="list-group-item">
-					24 - OAK<br>
-					
-				</div>
-				<div class="list-group-item">
-					25 - HOU<br>
-					
-				</div>
-				<div class="list-group-item">
-					26 - SEA<br>
-					
-				</div>
-				<div class="list-group-item">
-					27 - KC<br>
-					
-				</div>
-				<div class="list-group-item">
-					28 - DAL<br>
-					
-				</div>
-				<div class="list-group-item">
-					29 - GB<br>
-					
-				</div>
-				<div class="list-group-item">
-					30 - PIT<br>
-					
-				</div>
-				<div class="list-group-item">
-					31 - ATL<br>
-					
-				</div>
-				<div class="list-group-item">
-					32 - NO<br>
-					
-				</div>
+				@foreach($picks as $pick)
+					<div class="list-group-item">
+						{{ $pick['pick'] }} - {{ $pick['team'] }}<br>
+						{{ $pick['name'] }}
+					</div>
+				@endforeach
 			</div>
 		</div>
 		@foreach($mocks as $i => $user_mocks)
+			{{ dd($user_mocks) }}
 			<div class="col-sm-2">
 				<h3>{{ $user_mocks[$i]->user ? $user_mocks[$i]->user->name : '' }}</h3>
 				<div class="list-group">
