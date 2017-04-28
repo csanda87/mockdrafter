@@ -94,11 +94,6 @@
 			],
 			[
 				'pick' => 15,
-				'name' => '',
-				'team' => 'IND'
-			],
-			[
-				'pick' => 15,
 				'name' => 'Malik Hooker',
 				'team' => 'IND'
 			],
@@ -116,6 +111,11 @@
 				'pick' => 18,
 				'name' => 'Adoree Jackson',
 				'team' => 'TEN'
+			],
+			[
+				'pick' => 19,
+				'name' => '',
+				'team' => 'TB'
 			]
 		]);
 	@endphp
