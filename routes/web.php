@@ -29,7 +29,6 @@ Route::get('/draft-day', function () {
 	$dirt = $mocks->filter(function($mock){
 		return $mock->user_id == 1;
 	});
-	dd($dirt);
 	return view('draft_day')->with([
 		'mocks' => $mocks
 	]);
