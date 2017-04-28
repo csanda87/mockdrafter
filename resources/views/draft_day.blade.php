@@ -309,7 +309,7 @@
 			],
 			[
 				'pick' => 25,
-				'name' => '',
+				'name' => 'Jabrill Peppers',
 				'team' => 'CLE'
 			],
 			[
