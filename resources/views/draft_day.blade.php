@@ -124,7 +124,7 @@
 			<h3>Official</h3>
 			<div class="list-group">
 				@foreach($picks as $pick)
-					<div class="list-group-item">
+					<div class="list-group-item" style="height: 80px">
 						{{ $pick['pick'] }} - {{ $pick['team'] }}<br>
 						{{ $pick['name'] }}
 					</div>
@@ -136,7 +136,7 @@
 				<h3>{{ $user_mocks[$i]->user ? $user_mocks[$i]->user->name : '' }}</h3>
 				<div class="list-group">
 					@foreach($user_mocks as $mock)
-						<div class="list-group-item">
+						<div class="list-group-item" style="height: 80px">
 							{{ $mock->draftSlot->pick }} - {{ $mock->draftSlot->team->short_name }}<br>
 							{{ $mock->player->name }}
 						</div>
