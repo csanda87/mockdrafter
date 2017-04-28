@@ -46,7 +46,7 @@
 				</div>
 				<div class="list-group-item">
 					6 - NYJ<br>
-					
+					Jamal Adams
 				</div>
 				<div class="list-group-item">
 					7 - LAC<br>
