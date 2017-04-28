@@ -344,7 +344,7 @@
 			],
 			[
 				'pick' => 32,
-				'name' => '',
+				'name' => 'Ryan Ramczyk',
 				'team' => 'NO'
 			]
 		]);
