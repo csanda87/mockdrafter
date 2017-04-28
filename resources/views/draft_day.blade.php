@@ -97,7 +97,6 @@
 			</div>
 		</div>
 		@foreach($mocks as $i => $user_mocks)
-			{{ dd($user_mocks) }}
 			<div class="col-sm-2">
 				<h3>{{ $user_mocks[$i]->user ? $user_mocks[$i]->user->name : '' }}</h3>
 				<div class="list-group">
