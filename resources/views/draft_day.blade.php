@@ -329,7 +329,7 @@
 			],
 			[
 				'pick' => 29,
-				'name' => '',
+				'name' => 'David Njoku',
 				'team' => 'CLE'
 			],
 			[
