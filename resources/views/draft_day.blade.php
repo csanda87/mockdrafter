@@ -114,7 +114,7 @@
 			],
 			[
 				'pick' => 18,
-				'name' => 'Adoree' Jackson,
+				'name' => 'Adoree Jackson',
 				'team' => 'TEN'
 			]
 		]);
