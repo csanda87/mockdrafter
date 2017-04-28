@@ -3,21 +3,21 @@
 @section('content')
 <div class="container">
 	<div class="row">
-		<div class="col-sm-2">Round 13</div>
+		<div class="col-sm-2">Round 15</div>
 		<div class="col-sm-2">
-			Dirt: {{ 3+0+2+3+0+0+0+3+0+0+0+1+1+0 }}
+			Dirt: {{ 3+0+2+3+0+0+0+3+0+0+0+1+1+0+0 }}
 		</div>
 		<div class="col-sm-2">
-			Berg: {{ 3+1+0+3+0+0+0+3+0+0+0+1+3+0 }}
+			Berg: {{ 3+1+0+3+0+0+0+3+0+0+0+1+3+0+0 }}
 		</div>
 		<div class="col-sm-2">
-			Nickel: 3 {{  }}
+			Nickel: {{ 3+0+0+0+0+0+3+0+0+0+1+0+0+0 }}
 		</div>
 		<div class="col-sm-2">
-			R3lic: 6
+			R3lic: {{ 3+0+0+3+0+0+0+3+0+0+0+2+0+0+0 }}
 		</div>
 		<div class="col-sm-2">
-			Ronko: 7
+			Ronko: {{ 3+1+0+3+0+0+0+3+0+0+0+1+0+0+0 }}
 		</div>
 	</div>
 	@php
