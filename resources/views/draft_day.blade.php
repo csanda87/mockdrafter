@@ -96,6 +96,26 @@
 				'pick' => 15,
 				'name' => '',
 				'team' => 'IND'
+			],
+			[
+				'pick' => 15,
+				'name' => 'Malik Hooker',
+				'team' => 'IND'
+			],
+			[
+				'pick' => 16,
+				'name' => 'Marlon Humphrey',
+				'team' => 'BAL'
+			],
+			[
+				'pick' => 17,
+				'name' => 'Jonathan Allen',
+				'team' => 'WAS'
+			],
+			[
+				'pick' => 18,
+				'name' => 'Adoree' Jackson,
+				'team' => 'TEN'
 			]
 		]);
 	@endphp
