@@ -25,7 +25,7 @@ Route::resource('/players', 'PlayerController');
 
 Route::get('/mock', 'MockController@getMyMock');
 Route::get('/draft-day', function () {
-	$mocks = App\MockDraft::with('player','user','draftSlot.team')->get()->orderBy('user_id');
+	$mocks = App\MockDraft::with('player','user','draftSlot.team')->get()->groupBy('user_id');
 	return view('draft_day')->with([
 		'mocks' => $mocks
 	]);
