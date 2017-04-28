@@ -3,9 +3,9 @@
 @section('content')
 <div class="container">
 	<div class="row">
-		<div class="col-sm-2"></div>
+		<div class="col-sm-2">Round 5</div>
 		<div class="col-sm-2">
-			Dirt: 
+			Dirt: 8
 		</div>
 		<div class="col-sm-2">
 			Berg: 
@@ -29,93 +29,125 @@
 					Myles Garrett
 				</div>
 				<div class="list-group-item">
-					2 - CHI (trade from <br>
+					2 - CHI<br>
 					Mitch Trubisky
 				</div>
 				<div class="list-group-item">
-					3 - SF (trade from CHI)<br>
+					3 - SF<br>
 					Solomon Thomas
 				</div>
 				<div class="list-group-item">
-					4 - JAX (trade from CHI)<br>
-					Solomon Thomas
+					4 - JAX<br>
+					Leonard Fournette
 				</div>
 				<div class="list-group-item">
+					5 - TEN<br>
+					Corey Davis
+				</div>
+				<div class="list-group-item">
+					6 - NYJ<br>
 					
 				</div>
 				<div class="list-group-item">
+					7 - LAC<br>
+				</div>
+				<div class="list-group-item">
+					8 - CAR<br>
+				</div>
+				<div class="list-group-item">
+					9 - CIN<br>
 					
 				</div>
 				<div class="list-group-item">
+					10 - BUF<br>
 					
 				</div>
 				<div class="list-group-item">
+					11 - NO<br>
 					
 				</div>
 				<div class="list-group-item">
+					12 - CLE<br>
 					
 				</div>
 				<div class="list-group-item">
+					13 - ARI<br>
 					
 				</div>
 				<div class="list-group-item">
+					14 - PHI<br>
 					
 				</div>
 				<div class="list-group-item">
+					15 - IND<br>
 					
 				</div>
 				<div class="list-group-item">
+					16 - BAL<br>
 					
 				</div>
 				<div class="list-group-item">
+					17 - WAS<br>
 					
 				</div>
 				<div class="list-group-item">
+					18 - TEN<br>
 					
 				</div>
 				<div class="list-group-item">
+					19 - TB<br>
 					
 				</div>
 				<div class="list-group-item">
+					20 - DEN<br>
 					
 				</div>
 				<div class="list-group-item">
+					21 - DET<br>
 					
 				</div>
 				<div class="list-group-item">
+					22 - MIA<br>
 					
 				</div>
 				<div class="list-group-item">
+					23 - NYG<br>
 					
 				</div>
 				<div class="list-group-item">
+					24 - OAK<br>
 					
 				</div>
 				<div class="list-group-item">
+					25 - HOU<br>
 					
 				</div>
 				<div class="list-group-item">
+					26 - SEA<br>
 					
 				</div>
 				<div class="list-group-item">
+					27 - KC<br>
 					
 				</div>
 				<div class="list-group-item">
+					28 - DAL<br>
 					
 				</div>
 				<div class="list-group-item">
+					29 - GB<br>
 					
 				</div>
 				<div class="list-group-item">
+					30 - PIT<br>
 					
 				</div>
 				<div class="list-group-item">
+					31 - ATL<br>
 					
 				</div>
 				<div class="list-group-item">
-					
-				</div>
-				<div class="list-group-item">
+					32 - NO<br>
 					
 				</div>
 			</div>
