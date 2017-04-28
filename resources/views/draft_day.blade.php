@@ -79,6 +79,11 @@
 			],
 			[
 				'pick' => 12,
+				'name' => 'Deshaun Watson',
+				'team' => 'ARI'
+			],
+			[
+				'pick' => 13,
 				'name' => 'Haason Reddick',
 				'team' => 'ARI'
 			]
