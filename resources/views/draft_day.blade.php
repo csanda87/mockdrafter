@@ -314,8 +314,8 @@
 			],
 			[
 				'pick' => 26,
-				'name' => '',
-				'team' => 'SEA'
+				'name' => 'Takkarist McKinley',
+				'team' => 'ATL'
 			],
 			[
 				'pick' => 27,
