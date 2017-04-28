@@ -8,16 +8,16 @@
 			Dirt: 8
 		</div>
 		<div class="col-sm-2">
-			Berg: 
+			Berg: 7
 		</div>
 		<div class="col-sm-2">
-			Nickel:
+			Nickel: 3
 		</div>
 		<div class="col-sm-2">
-			R3lic:
+			R3lic: 6
 		</div>
 		<div class="col-sm-2">
-			Ronko: 
+			Ronko: 7
 		</div>
 	</div>
 	<div class="row">
