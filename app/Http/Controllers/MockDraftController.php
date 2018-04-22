@@ -32,7 +32,7 @@ class MockDraftController extends Controller
     public function show(MockDraft $mock_draft)
     {
     	$mock_draft = $mock_draft->load('user', 'selections', 'selections.draftSlot.team', 'selections.player');
-    	// dd($mock_draft->selections[0]);
+
     	return view('mock_draft.show')->with([
     		'mock_draft' => $mock_draft
     	]);

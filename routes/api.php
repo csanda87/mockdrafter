@@ -25,6 +25,8 @@ Route::get('/players/{year}', function($year) {
 	return App\Player::where('year', $year)->get();
 });
 
-Route::post('/select-player', function (Request $request) {
+Route::post('/mock-draft/{id}/selection', function (Request $request, $id) {
+	$request->merge(['mock_draft_id' => $id]);
+	
     return App\MockDraftSelection::create($request->all());
 });
