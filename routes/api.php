@@ -21,12 +21,16 @@ Route::get('/draft-order/{year}/{round}', function($year, $round) {
 	return App\DraftSlot::with('team')->where('year', $year)->where('round', $round)->get();
 });
 
+Route::post('/mock-draft/{id}/selection', function (Request $request, $id) {
+	$request->merge(['mock_draft_id' => $id]);
+
+    return App\MockDraftSelection::create($request->all());
+});
+
 Route::get('/players/{year}', function($year) {
 	return App\Player::where('year', $year)->get();
 });
 
-Route::post('/mock-draft/{id}/selection', function (Request $request, $id) {
-	$request->merge(['mock_draft_id' => $id]);
-	
-    return App\MockDraftSelection::create($request->all());
+Route::get('/teams', function() {
+	return App\Team::pluck('name', 'short_name');
 });

@@ -24,7 +24,6 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::resource('/draft-slots', 'DraftSlotController');
 	Route::resource('/mock-drafts', 'MockDraftController');
 	Route::resource('/players', 'PlayerController');
-	Route::resource('/teams', 'TeamController');
 
 	Route::get('/mock', 'MockController@getMyMock');
 	Route::get('/draft-day', function () {
