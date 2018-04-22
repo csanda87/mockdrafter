@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMockDraftsTable extends Migration
+class CreateMockDraftSelectionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateMockDraftsTable extends Migration
      */
     public function up()
     {
-        Schema::create('mock_drafts', function (Blueprint $table) {
+        Schema::create('mock_draft_selections', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->string('name');
+            $table->integer('mock_draft_id');
+            $table->integer('draft_slot_id');
+            $table->integer('player_id');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateMockDraftsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mock_drafts');
+        Schema::dropIfExists('mock_draft_selections');
     }
 }

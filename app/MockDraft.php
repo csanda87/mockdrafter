@@ -6,20 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class MockDraft extends Model
 {
-    protected $fillable = ['user_id', 'draft_slot_id', 'player_id'];
-
-    public function player()
-    {
-    	return $this->belongsTo(Player::class);
-    }
-
-    public function draftSlot()
-    {
-    	return $this->belongsTo(DraftSlot::class);
-    }
+    protected $fillable = ['user_id', 'year', 'name'];
 
     public function user()
     {
-    	return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
+    }
+
+    public function selections()
+    {
+    	return $this->hasMany(MockDraftSelection::class);
     }
 }

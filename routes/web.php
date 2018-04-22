@@ -12,29 +12,33 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/home', function() {
+    	return redirect('/mock-drafts');
+	});
+	Route::resource('/draft-slots', 'DraftSlotController');
+	Route::resource('/mock-drafts', 'MockDraftController');
+	Route::resource('/players', 'PlayerController');
+	Route::resource('/teams', 'TeamController');
 
-Route::resource('/teams', 'TeamController');
-Route::resource('/draft-slots', 'DraftSlotController');
-Route::resource('/players', 'PlayerController');
+	Route::get('/mock', 'MockController@getMyMock');
+	Route::get('/draft-day', function () {
+		$mocks = App\MockDraft::with('player','selections.user','draftSlot.team')->get()->groupBy('mock_draft_id');
+		return view('draft_day')->with([
+			'mocks' => $mocks
+		]);
+	});
 
-Route::get('/mock', 'MockController@getMyMock');
-Route::get('/draft-day', function () {
-	$mocks = App\MockDraft::with('player','user','draftSlot.team')->get()->groupBy('user_id');
-	return view('draft_day')->with([
-		'mocks' => $mocks
-	]);
-});
+	Route::get('official-mock', function() {
+		$draft_slots = App\DraftSlot::with('team')->get();
 
-Route::get('official-mock', function() {
-	$draft_slots = App\DraftSlot::with('team')->get();
-
-	return view('official_mock')->with([
-		'draft_slots' => $draft_slots
-	]);
+		return view('official_mock')->with([
+			'draft_slots' => $draft_slots
+		]);
+	});
 });

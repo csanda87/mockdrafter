@@ -21,10 +21,10 @@ Route::get('/draft-order/{year}/{round}', function($year, $round) {
 	return App\DraftSlot::with('team')->where('year', $year)->where('round', $round)->get();
 });
 
-Route::get('/draft-prospects/{year}', function($year) {
+Route::get('/players/{year}', function($year) {
 	return App\Player::where('year', $year)->get();
 });
 
-Route::post('/draft-prospect', function (Request $request) {
-    return App\MockDraft::create($request->all());
+Route::post('/select-player', function (Request $request) {
+    return App\MockDraftSelection::create($request->all());
 });

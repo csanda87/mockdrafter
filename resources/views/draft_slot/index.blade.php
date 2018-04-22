@@ -22,7 +22,7 @@
                         <td>{{ $slot->year }}</td>
                         <td>{{ $slot->round }}</td>
                         <td>{{ $slot->pick }}</td>
-                        <td>{{ $slot->team_id }}</td>
+                        <td>{{ $slot->team->short_name }}</td>
                         <td>{{ $slot->notes }}</td>
                     </tr>
                     @endforeach

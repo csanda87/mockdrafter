@@ -42,9 +42,19 @@
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
+                    @if (!Auth::guest())
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="/mock-drafts">Mock Drafts</a>
+                            </li>
+                            <li>
+                                <a href="/players">Players</a>
+                            </li>
+                            <li>
+                                <a href="/draft-slots">Draft Order</a>
+                            </li>
+                        </ul>
+                    @endif
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">

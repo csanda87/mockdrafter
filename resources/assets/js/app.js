@@ -16,6 +16,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('draft-central', require('./components/DraftCentral.vue'));
+Vue.component('player-list', require('./components/PlayerList.vue'));
 
 const app = new Vue({
     el: '#app'
