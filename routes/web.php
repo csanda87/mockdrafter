@@ -23,9 +23,9 @@ Route::group(['middleware' => ['auth']], function () {
 	});
 	Route::resource('/draft-slots', 'DraftSlotController');
 	Route::resource('/mock-drafts', 'MockDraftController');
+	Route::get('/mock-drafts/{id}/selections', 'MockController@getMyMock');
 	Route::resource('/players', 'PlayerController');
 
-	Route::get('/mock', 'MockController@getMyMock');
 	Route::get('/draft-day', function () {
 		$mocks = App\MockDraft::with('player','selections.user','draftSlot.team')->get()->groupBy('mock_draft_id');
 		return view('draft_day')->with([

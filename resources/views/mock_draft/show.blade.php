@@ -23,7 +23,7 @@
             @else
                 <div class="alert alert-warning">
                     <p>No selections have been made.</p>
-                    <a href="/mock" class="btn btn-primary btn-sm">Make Selections</a>
+                    <a href="/mock-drafts/{{ $mock_draft->id }}/selections" class="btn btn-primary btn-sm">Make Selections</a>
                 </div>
             @endif
         </div>

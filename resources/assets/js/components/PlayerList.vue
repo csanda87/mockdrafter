@@ -13,20 +13,23 @@
             </div>
         </div>
         <div class="list-group">
-            <div class="list-group-item" 
-                v-for="player in filteredPlayers"
-                @click="selectPlayer(player)">
+            <button type="button"
+                v-for="player in filteredPlayers" 
+                @click="selectPlayer(player)"
+                :class="selectedPlayer.id == player.id ? 'active' : ''"
+                class="list-group-item">
                 <strong>{{ player.name }} - {{ player.position }}</strong><br>
                 <span class="text-muted">{{ player.school }}</span>
-            </div>
+            </button>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['year'],
+        props: ['mockDraftPicks','year'],
         data: () => ({
+            availablePlayers: [],
             positions: [
                 'Best Available',
                 'QB','RB','WR','TE','OT','OG','OC',
@@ -47,6 +50,18 @@
                 return this.players;
             }
         },
+        watch: {
+            mockDraftPicks() {
+                // console.log(newPicks,this.players[0]);
+                // alert('mock-draft-changed');
+                this.availablePlayers = this.players.filter((player) => {
+                    // return player.id != 101;
+                    return this.isDrafted(player.id);
+                });
+                this.selectedPlayer = {};
+                this.selectedPosition = 'Best Available';
+            }
+        },
         methods: {
             getPlayers() {
                 axios.get('/api/players/' + this.year)
@@ -56,6 +71,11 @@
                     .catch((error) => {
                         console.warn(error);
                     });
+            },
+            isDrafted(playerId) {
+                return this.mockDraftPicks.filter((pick) => {
+                    return pick.player_id === playerId;
+                }).length;
             },
             selectPlayer(player) {
                 this.selectedPlayer = player;

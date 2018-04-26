@@ -26,7 +26,7 @@
 
 <script>
     export default {
-        props: ['year'],
+        props: ['mockDraft','year'],
         data: () => ({
             activeDraftSlot: {},
             draftSlots: [],
@@ -52,6 +52,9 @@
             }
         },
         watch: {
+            mockDraft() {
+                alert('mock-draft-changed');
+            },
             selectedRound() {
                 this.getDraftSlots();
             }
